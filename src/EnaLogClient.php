@@ -7,6 +7,7 @@ namespace EnaLog;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
+use EnaLog\EnaLogEventException;
 
 final class EnaLogClient
 {
