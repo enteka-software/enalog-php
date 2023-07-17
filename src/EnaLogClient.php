@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace EnaLog;
 
+use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
-use EnaLog\EnaLogEventException;
+
+class EnaLogEventException extends Exception
+{
+}
 
 final class EnaLogClient
 {
