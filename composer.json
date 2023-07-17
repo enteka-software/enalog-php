@@ -1,12 +1,12 @@
 {
     "name": "enalog/enalog-php",
-    "description": "A skeleton repository for my packages",
-    "keywords": ["php", "skeleton", "package"],
+    "description": "EnaLog PHP SDK",
+    "keywords": ["php", "enalog"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Sam Newby",
+            "email": "sam@enalog.app"
         }
     ],
     "require": {
