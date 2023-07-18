@@ -20,7 +20,7 @@ final class EnaLogClient
     public function __construct(string $apiKey, $client = null)
     {
         $this->httpClient = $client ?? new Client([
-            'base_uri' => 'https://api.enalog.app/v1',
+            'base_uri' => 'https://api.enalog.app/v1/',
             'headers' => ['Authorization' => 'Bearer: ' . $apiKey],
         ]);
     }
@@ -28,8 +28,8 @@ final class EnaLogClient
     public function pushEvent(array $event)
     {
         try {
-            $res = $this->httpClient->post('/events', [
-                'json' => json_encode($event, JSON_THROW_ON_ERROR),
+            $res = $this->httpClient->post('events', [
+                'json' => $event,
             ]);
 
             $body = $res->getBody();
@@ -40,6 +40,5 @@ final class EnaLogClient
         } catch (ServerException $e) {
             throw new EnaLogEventException('Failed to send event to EnaLog');
         }
-
     }
 }
