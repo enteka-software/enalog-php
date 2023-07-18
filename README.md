@@ -10,7 +10,7 @@ composer require enalog/enalog-php
 
 **Sending Events**
 
-```
+```php
 use EnaLog\EnaLogClient;
 
 
@@ -22,8 +22,8 @@ $enalogClient->pushEvent([
     'description' => 'hello world event description',
     'icon' => '👀',
     'tags' => ['hello', 'world'],
-    'meta' => array(['meta' => 'data']),
-    'channels' => array(),
+    'meta' => ['meta' => 'data'],
+    'channels' => [],
     'user_id' => '1234'
 ]);
 ```
